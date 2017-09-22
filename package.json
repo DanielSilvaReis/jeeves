@@ -1,0 +1,15 @@
+{
+  "name": "jeeves",
+  "version": "1.0.0",
+  "description": "The perfect gentleman roboter, who will attend your needs! A discord bot and Community Manager.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Josi",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.2.1"
+  }
+}
