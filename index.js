@@ -43,7 +43,7 @@ bot.on("message", (message) => {
     }
 
     //Logs activity
-    var logResult = `[${new Date(message.createdTimestamp).toLocaleString()}] [#${message.channel.name}] ${message.member.displayName} : ${message.content}\r\n`;
+    var logResult = `[${new Date(message.createdTimestamp).toLocaleString()}] [#${message.channel.name} / ${message.guild.name}] ${message.member.displayName} : ${message.content}\r\n`;
     fs.appendFile("log.txt", logResult, "utf8", function(err) {
       if(err) {
           return console.log(err);
