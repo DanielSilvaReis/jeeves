@@ -24,7 +24,7 @@ bot.on("message", (message) => {
    */
   function handleCommands() { 
     const command = message.content.slice(config.prefix.length).trim().split(/ +/g).shift().toLowerCase();
-    const args = message.content.slice(config.prefix.length + command).trim();
+    const args = message.content.slice(config.prefix.length + command.length).trim();
   
     // Commands handler
     if(dict.commands.greet.indexOf(command) >= 0) {
@@ -90,9 +90,9 @@ bot.on("message", (message) => {
      * Toggles the Free Mode
      */
     function toggleFreeMode() {
-      if (toggle == dict.commands.toggleFreeMode[1]) { // ON
+      if (args.toLowerCase() == dict.commands.toggleFreeMode[1]) { // ON
         config.freeMode = true;
-      } else if (toggle == dict.commands.toggleFreeMode[2]) { // OFF
+      } else if (args.toLowerCase() == dict.commands.toggleFreeMode[2]) { // OFF
         config.freeMode = false;
       }
       message.channel.send(config.freeMode ? dict.freeMode.enabled : dict.freeMode.disabled);
@@ -111,7 +111,7 @@ bot.on("message", (message) => {
     } else if (dict.commands.help.indexOf(command) >= 0) {
       handleHelp();
     } else {
-      playEightBall();
+      playMagic8Ball();
     }
 
     /**
