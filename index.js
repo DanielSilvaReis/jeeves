@@ -5,6 +5,8 @@ const dict = require("./dictionary.json")
 var Twitter = require("twitter");
 const fs = require('fs');
 
+process.title = "jeeves";
+
 bot.on("ready", () => {
   console.log(dict.ready);
 });
