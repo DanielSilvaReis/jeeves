@@ -44,6 +44,7 @@ bot.on("message", (message) => {
 
     //Logs activity
     var logResult = `[${new Date(message.createdTimestamp).toLocaleString()}] [#${message.channel.name} / ${message.guild.name}] ${message.member.displayName} : ${message.content}\r\n`;
+
     fs.appendFile("log.txt", logResult, "utf8", function(err) {
       if(err) {
           return console.log(err);
@@ -67,6 +68,8 @@ bot.on("message", (message) => {
         message.channel.send(dict.tweet.emptyError);
         return;
       }
+
+      var formattedTweet = args.replace(" - ", " — ");
   
       var twitterClient = new Twitter({
         consumer_key: config.twitter.consumer_key,
@@ -75,7 +78,7 @@ bot.on("message", (message) => {
         access_token_secret: config.twitter.access_token_secret
       });
   
-      twitterClient.post('statuses/update', { status: args })
+      twitterClient.post('statuses/update', { status: formattedTweet })
         .then(function (response) {
           message.channel.send(dict.tweet.success);
         })
