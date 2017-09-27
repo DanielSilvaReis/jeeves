@@ -1,8 +1,9 @@
 {
     "ready" : "I am ready!",
+    "copyright" : "© Elysium Project",
     "commands" : {
         "notFound" : "Couldn't detect a command. Try again! :robot:",
-        "displayRanks" : "ranks",
+        "settings" : ["ranks", "config", "settings"],
         "greet" : ["hi", "hello", "greet", "greetings", "ping", "sup", "yo"],
         "help" : ["help", "commands", "info"],
         "tweet" : ["tweet", "announce", "ann"],
@@ -36,7 +37,10 @@
         "BEEP BEEP BOOP BOP BOOP BEEP BEEP {user} :robot:"
     ],
     "tweet" : {
-        "success" : "Tweeting :bird:",
+        "getLatestArgs" : ["get", "latest", "update"],
+        "latestTweet" : ":bird: Sharing latest tweet: ",
+        "tag" : "here",
+        "success" : ":bird: Tweeting... Link: ",
         "error" : "I couldn't tweet! :sob:",
         "emptyError" : "Cannot tweet nothing! :thinking:"
     },
@@ -44,8 +48,12 @@
         "enabled" : "Free Mode is **enabled**!",
         "disabled" : "Free Mode is **disabled**!"
     },
-    "ranks": {
-        "listRank2" : "The following roles have **Rank 2** permissions: ",
-        "listRank1" : "The following roles have **Rank 1** permissions: "
+    "settings": {
+        "title" : "Settings",
+        "rank2" : "Rank 2",
+        "rank1" : "Rank 1",
+        "freeMode" : "Free Mode",
+        "enabled" : "Enabled",
+        "disabled" : "Disabled"
     }
 }
