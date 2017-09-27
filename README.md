@@ -58,7 +58,11 @@ Users can display all settings, like this:
 ```
 
 ### Logging
-If turned on, all activity where the prefix is used will logged in a `log.txt` file!
+If turned on, all activity where the prefix is used will be logged in a `log.txt` file! Logging can be temporarily turned on or off like this:
+```
+!logging on
+!logging off
+```
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details!

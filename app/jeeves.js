@@ -40,6 +40,8 @@ bot.on("message", (message) => {
       handleAnnouncement();
     } else if ((dict.commands.toggleFreeMode[0] == command) && isAllowed(2)) {
       toggleFreeMode();
+    } else if ((dict.commands.toggleLogging[0] == command) && isAllowed(2)) {
+      toggleLogging();
     } else if (dict.commands.settings.indexOf(command) >= 0) {
       displaySettings();
     } else {
@@ -63,7 +65,13 @@ bot.on("message", (message) => {
             fields: [
               {
                 name: dict.settings.freeMode,
-                value: config.freeMode ? dict.settings.enabled : dict.settings.disabled
+                value: config.freeMode ? dict.settings.enabled : dict.settings.disabled,
+                inline: true
+              },
+              {
+                name: dict.settings.log,
+                value: config.log ? dict.settings.enabled : dict.settings.disabled,
+                inline: true
               },
               {
                 name: dict.settings.rank1,
@@ -111,7 +119,7 @@ bot.on("message", (message) => {
     function getLatestTweet(twitterClient) {
       twitterClient.get('statuses/user_timeline', { user_id : config.twitter.access_token_key.split("-").shift() })
       .then((result) => {
-        sendMessage(`${dict.tweet.latestTweet}https://twitter.com/${result[0].user.name}/status/${result[0].id_str}`);
+        sendMessage(`${dict.tweet.latestTweet}https://twitter.com/${result[0].user.screen_name}/status/${result[0].id_str}`);
         shareAnnouncement(result[0]);
       })
       .catch((errors) => handleTweetErrors(errors));
@@ -126,7 +134,7 @@ bot.on("message", (message) => {
 
       twitterClient.post('statuses/update', { status: formattedTweet })
       .then((result) => {
-        sendMessage(`${dict.tweet.success}https://twitter.com/${result.user.name}/status/${result.id_str}`);
+        sendMessage(`${dict.tweet.success}https://twitter.com/${result.user.screen_name}/status/${result.id_str}`);
         shareAnnouncement(result);
       })
       .catch((errors) => handleTweetErrors(errors));
@@ -163,10 +171,10 @@ bot.on("message", (message) => {
         channel.send(dict.tweet.tag, { 
           embed: { 
             title : dateFormat(response.created_at, "mmmm dS, yyyy at HH:MM:ss"), 
-            url : `https://twitter.com/${response.user.name}/status/${response.id_str}`, 
+            url : `https://twitter.com/${response.user.screen_name}/status/${response.id_str}`, 
             author : { 
-              name : `Elysium Project (@${response.user.name})`, 
-              url : `https://twitter.com/${response.user.name}}` 
+              name : `Elysium Project (@${response.user.screen_name})`, 
+              url : `https://twitter.com/${response.user.screen_name}}` 
             }, 
             description : response.text 
           } 
@@ -177,7 +185,7 @@ bot.on("message", (message) => {
     }
 
     /**
-     * Toggles the Free Mode
+     * Temporarily toggles the Free Mode
      */
     function toggleFreeMode() {
       if (args.toLowerCase() == dict.commands.toggleFreeMode[1]) { // ON
@@ -186,6 +194,18 @@ bot.on("message", (message) => {
         config.freeMode = false;
       }
       sendMessage(config.freeMode ? dict.freeMode.enabled : dict.freeMode.disabled);
+    }
+
+    /**
+     * Temporarily toggles logging
+     */
+    function toggleLogging() {
+      if (args.toLowerCase() == dict.commands.toggleLogging[1]) { // ON
+        config.log = true;
+      } else if (args.toLowerCase() == dict.commands.toggleLogging[2]) { // OFF
+        config.log = false;
+      }
+      sendMessage(config.log ? dict.logging.enabled : dict.logging.disabled);
     }
   }
   

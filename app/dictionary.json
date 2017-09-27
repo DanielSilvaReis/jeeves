@@ -7,7 +7,8 @@
         "greet" : ["hi", "hello", "greet", "greetings", "ping", "sup", "yo"],
         "help" : ["help", "commands", "info"],
         "tweet" : ["tweet", "announce", "ann"],
-        "toggleFreeMode" : ["freemode", "on", "off"]
+        "toggleFreeMode" : ["freemode", "on", "off"],
+        "toggleLogging" : ["logging", "on", "off"]
     },
     "magic8ball" : [
         "It is certain",
@@ -48,11 +49,16 @@
         "enabled" : "Free Mode is **enabled**!",
         "disabled" : "Free Mode is **disabled**!"
     },
+    "logging" : {
+        "enabled" : "Logging is **enabled**!",
+        "disabled" : "Logging is **disabled**!"
+    },
     "settings": {
         "title" : "Settings",
         "rank2" : "Rank 2",
         "rank1" : "Rank 1",
         "freeMode" : "Free Mode",
+        "log" : "Logging",
         "enabled" : "Enabled",
         "disabled" : "Disabled"
     }
