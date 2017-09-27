@@ -168,7 +168,7 @@ bot.on("message", (message) => {
         var channel = bot.channels.get(id);
         channel.send(dict.tweet.tag, { 
           embed: { 
-            title : dateFormat(response.created_at, "mmmm dS, yyyy at HH:MM:ss"), 
+            title : dateFormat(response.created_at, "mmmm dS, yyyy — HH:MM:ss"), 
             url : `https://twitter.com/${response.user.screen_name}/status/${response.id_str}`, 
             author : { 
               name : `Elysium Project (@${response.user.screen_name})`, 
