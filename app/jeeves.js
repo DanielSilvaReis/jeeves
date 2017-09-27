@@ -40,8 +40,6 @@ bot.on("message", (message) => {
       handleAnnouncement();
     } else if ((dict.commands.toggleFreeMode[0] == command) && isAllowed(2)) {
       toggleFreeMode();
-    } else if ((dict.commands.toggleLogging[0] == command) && isAllowed(2)) {
-      toggleLogging();
     } else if (dict.commands.settings.indexOf(command) >= 0) {
       displaySettings();
     } else {
@@ -194,18 +192,6 @@ bot.on("message", (message) => {
         config.freeMode = false;
       }
       sendMessage(config.freeMode ? dict.freeMode.enabled : dict.freeMode.disabled);
-    }
-
-    /**
-     * Temporarily toggles logging
-     */
-    function toggleLogging() {
-      if (args.toLowerCase() == dict.commands.toggleLogging[1]) { // ON
-        config.log = true;
-      } else if (args.toLowerCase() == dict.commands.toggleLogging[2]) { // OFF
-        config.log = false;
-      }
-      sendMessage(config.log ? dict.logging.enabled : dict.logging.disabled);
     }
   }
   
