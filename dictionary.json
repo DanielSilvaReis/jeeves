@@ -3,7 +3,7 @@
     "commands" : {
         "notFound" : "Couldn't detect a command. Try again! :robot:",
         "displayRanks" : "ranks",
-        "greet" : ["hi", "hello", "greet", "greetings", "ping"],
+        "greet" : ["hi", "hello", "greet", "greetings", "ping", "sup", "yo"],
         "help" : ["help", "commands", "info"],
         "tweet" : ["tweet", "announce", "ann"],
         "toggleFreeMode" : ["freemode", "on", "off"]
@@ -32,7 +32,8 @@
     ],
     "greetings" : [
         "Good day, {user}! How may I be of assistance? :robot:",
-        "Greetings {user}! I am Jeeves, a gentleman roboter and Community Manager, who will attend your needs! :grinning:"
+        "Greetings {user}! I am Jeeves, a gentleman roboter and Community Manager, who will attend your needs! :grinning:",
+        "BEEP BEEP BOOP BOP BOOP BEEP BEEP {user} :robot:"
     ],
     "tweet" : {
         "success" : "Tweeting :bird:",
