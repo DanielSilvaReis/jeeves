@@ -1,0 +1,16 @@
+{
+    "token" : "DISCORD_BOT_TOKEN",
+    "prefix" : "!",
+    "title" : "jeeves",
+    "twitter" : {
+        "consumer_key" : "YOUR_CONSUMER_KEY",  
+        "consumer_secret" : "YOUR_CONSUMER_SECRET",
+        "access_token_key" : "YOUR_ACCESS_TOKEN_KEY",  
+        "access_token_secret" : "YOUR_ACCESS_TOKEN_SECRET",
+        "channels" : ["CHANNEL_ID_1"]
+    },
+    "rank2" : ["Role_1", "Role_2"],
+    "rank1" : ["Role_3"],
+    "freeMode" : false,
+    "log" : true
+}
