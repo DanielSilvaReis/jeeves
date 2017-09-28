@@ -170,6 +170,9 @@ bot.on("message", (message) => {
           embed: { 
             title : dateFormat(response.created_at, "mmmm dS, yyyy — HH:MM"), 
             url : `https://twitter.com/${response.user.screen_name}/status/${response.id_str}`, 
+            footer: {
+              text: dict.copyright
+            },
             author : { 
               name : `Elysium Project (@${response.user.screen_name})`, 
               url : `https://twitter.com/${response.user.screen_name}}` 
