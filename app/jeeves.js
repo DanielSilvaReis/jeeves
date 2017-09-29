@@ -175,7 +175,7 @@ bot.on("message", (message) => {
             },
             author : { 
               name : `Elysium Project (@${response.user.screen_name})`, 
-              url : `https://twitter.com/${response.user.screen_name}}` 
+              url : `https://twitter.com/${response.user.screen_name}` 
             }, 
             description : response.text 
           } 
