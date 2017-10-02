@@ -1,11 +1,11 @@
 {
   "name": "jeeves",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The perfect gentleman roboter, who will attend your needs! A discord bot and Community Manager.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app/jeeves.js",
+    "start": "node app/index.js",
     "stop": "killall -SIGINT jeeves"
   },
   "author": "Josi",

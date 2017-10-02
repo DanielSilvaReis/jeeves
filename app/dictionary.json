@@ -7,7 +7,10 @@
         "greet" : ["hi", "hello", "greet", "greetings", "ping", "sup", "yo"],
         "help" : ["help", "commands", "info"],
         "tweet" : ["tweet", "announce", "ann"],
-        "toggleFreeMode" : ["freemode", "on", "off"]
+        "toggleFreeMode" : ["freemode", "on", "off"],
+        "fidgetSpinner" : ["spin", "fidget", "spinner"],
+        "fortune" : "fortune",
+        "ask" : "ask"
     },
     "magic8ball" : [
         "It is certain",
