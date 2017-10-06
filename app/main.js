@@ -15,7 +15,7 @@ String.prototype.isEmpty = function() {
  * @param {String} displayName 
  * @param {String} text 
  */
-function logActivity(date, channel, server, displayName, text) {
+module.exports.logActivity = (date, channel, server, displayName, text) => {
     var channelServer = channel.isEmpty() && server.isEmpty() ? "[BOT]" : `[#${channel} / ${server}]`;
     var logResult = `[${date.toLocaleString()}] ${channelServer} ${displayName} : ${text}`;
 
@@ -34,14 +34,15 @@ function logActivity(date, channel, server, displayName, text) {
  * Jeeves sends a message
  * @param {*} text 
  * @param {boolean} hasExtraContent 
+ * @param {boolean} whisper 
  * @param {*} channel 
  */
-function sendMessage(text, hasExtraContent = false, channel = message.channel) {    
+module.exports.sendMessage = (text, hasExtraContent = false, whisper = false, channel = message.channel) => {    
     channel.startTyping();
     if(hasExtraContent) {
-        channel.send(text.content, text).catch((err) => catchError(err));
+        whisper ? channel.send(channel.author, text.content, text).catch((err) => catchError(err)) : channel.send(text.content, text).catch((err) => catchError(err));
     } else {
-        channel.send(text).catch((err) => catchError(err));
+        whisper ? channel.send(channel.author, text).catch((err) => catchError(err)) : channel.send(text).catch((err) => catchError(err));
     }
     channel.stopTyping();
 
@@ -55,13 +56,14 @@ function sendMessage(text, hasExtraContent = false, channel = message.channel) {
  * @param {Number} minRank - The minimum required rank
  * @param {*} member - The minimum required rank
  */
-function isAllowed(minRank, member) {
+module.exports.isAllowed = (minRank, member) => {
     var allowedRoles = config.rank2.concat(config.rank1);
     switch(minRank) {
         case 0:
             if(member.roles.some(r=>allowedRoles.includes(r.name))) {
                 return true;
             }
+            //TODO: add handle for set freemode channels
             return config.freeMode;
         case 1:
             return member.roles.some(r=>allowedRoles.includes(r.name));

@@ -1,4 +1,4 @@
-require("../helper");
+require("../main");
 const dict = require("../dictionary");
 
 /**

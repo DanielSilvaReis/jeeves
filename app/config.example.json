@@ -1,7 +1,7 @@
 {
     "token" : "DISCORD_BOT_TOKEN",
     "prefix" : "!",
-    "title" : "jeeves",
+    "botId" : "DISCORD_BOT_USERID",
     "twitter" : {
         "consumer_key" : "YOUR_CONSUMER_KEY",  
         "consumer_secret" : "YOUR_CONSUMER_SECRET",
@@ -11,6 +11,19 @@
     },
     "rank2" : ["Role_1", "Role_2"],
     "rank1" : ["Role_3"],
+    "gameMode" : {
+        "active" : false,
+        "allowedChannels" : ["CHANNEL_ID_1"]
+    },
     "freeMode" : false,
-    "log" : true
+    "log" : true,
+    "banned" : {
+        "active" : false,
+        "words" : [
+            "PLACE_BANNED_WORDS_HERE"            
+        ],
+        "unmoderatedChennals" : [
+            "CHANNEL_ID_1"
+        ]
+    }
 }

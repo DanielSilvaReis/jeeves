@@ -10,7 +10,7 @@
         "toggleFreeMode" : ["freemode", "on", "off"],
         "fidgetSpinner" : ["spin", "fidget", "spinner"],
         "fortune" : "fortune",
-        "ask" : "ask"
+        "ask" : ["ask", "magic8ball", "tell"],
     },
     "magic8ball" : [
         "It is certain",

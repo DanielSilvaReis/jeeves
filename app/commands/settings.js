@@ -1,11 +1,24 @@
-require("../helper");
+require("../main");
 const dict = require("../dictionary");
+
+/**
+     * Temporarily toggles the Free Mode
+     */
+    function toggleFreeMode() {
+        if (args.toLowerCase() == dict.commands.toggleFreeMode[1]) { // ON
+          config.freeMode = true;
+        } else if (args.toLowerCase() == dict.commands.toggleFreeMode[2]) { // OFF
+          config.freeMode = false;
+        }
+        sendMessage(config.freeMode ? dict.freeMode.enabled : dict.freeMode.disabled);
+      }
 
 /**
  * Displays all allowed roles and their ranks
  */
-module.exports = function() {
+module.exports.display = (authorId) => {
     sendMessage({
+        content : "<@" + authorId + ">",
         embed: {
             title: dict.settings.title,
             footer: {
@@ -34,5 +47,13 @@ module.exports = function() {
                 }
             ]
         }
-    });
+    }, true);
+}
+
+module.exports.toggleFiltering = () => {
+    console.log("toggle filtering");
+}
+
+module.exports.toggleGameMode = () => {
+    console.log("toggle filtering");
 }

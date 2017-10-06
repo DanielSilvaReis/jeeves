@@ -1,7 +1,5 @@
-require("../helper");
+require("../main");
 
-function help() {
+module.exports = (authorId) => {
     sendMessage("No help available yet!");
-}
-
-module.exports = help();
+};
