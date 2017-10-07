@@ -4,7 +4,7 @@ The perfect gentleman roboter, who will attend your needs!
 ## Configuration
 Jeeves requires [Node.JS](https://nodejs.org/en/)! All packages can be installed with the command `npm install`!
 
-To start Jeeves, you need to first create a `config.json` file in the `app/` folder. The `config.example.json` can be used! After the `config.json` is fully set, run Jeeves with: `npm start` !
+To start Jeeves, you need to first create a `config.json` file. The `config.example.json` can be used! After the `config.json` is fully set, run Jeeves with: `npm start` !
 
 ### Properties
 * **Token**: This is the token of the discord bot, where the app will connect to. See [this](https://discordapp.com/developers/applications/me)!
