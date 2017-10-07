@@ -58,5 +58,5 @@ typings/
 .env
 
 # Jeeves' stuff
-app/config.json
+config.json
 log.txt

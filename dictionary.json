@@ -2,15 +2,10 @@
     "ready" : "I am ready!",
     "copyright" : "© Elysium Project",
     "commands" : {
-        "notFound" : "Couldn't detect a command. Try again! :robot:",
-        "settings" : ["ranks", "config", "settings"],
         "greet" : ["hi", "hello", "greet", "greetings", "ping", "sup", "yo"],
         "help" : ["help", "commands", "info"],
         "tweet" : ["tweet", "announce", "ann"],
-        "toggleFreeMode" : ["freemode", "on", "off"],
-        "fidgetSpinner" : ["spin", "fidget", "spinner"],
-        "fortune" : "fortune",
-        "ask" : ["ask", "magic8ball", "tell"],
+        "ask" : ["ask", "play"]
     },
     "magic8ball" : [
         "It is certain",
@@ -40,24 +35,30 @@
         "BEEP BEEP BOOP BOP BOOP BEEP BEEP {user} :robot:"
     ],
     "tweet" : {
-        "getLatestArgs" : ["get", "latest", "update"],
-        "latestTweet" : ":bird: Sharing latest tweet: ",
-        "tag" : "@here",
+        "getTweet" : "get",
+        "getLatestTweet" : "latest",
+        "sharingTweet" : ":bird: Sharing tweet: ",
+        "tag" : "here",
         "success" : ":bird: Tweeting... Link: ",
         "error" : "I couldn't tweet! :sob:",
-        "emptyError" : "Cannot tweet nothing! :thinking:"
-    },
-    "freeMode" : {
-        "enabled" : "Free Mode is **enabled**!",
-        "disabled" : "Free Mode is **disabled**!"
+        "emptyError" : "Cannot tweet nothing! :thinking:",
+        "invalidLink" : "The twitter link is invalid!"
     },
     "settings": {
-        "title" : "Settings",
-        "rank2" : "Rank 2",
-        "rank1" : "Rank 1",
-        "freeMode" : "Free Mode",
+        "title" : "Information",
+        "description" : "Settings can be changed in the `config.json` file.\nType `!help <command>` to get the information on how to use the command.",
+        "allowedRoles" : "Allowed roles",
         "log" : "Logging",
+        "banned" : "Word filter",
         "enabled" : "Enabled",
-        "disabled" : "Disabled"
+        "disabled" : "Disabled",
+        "commands" : "List of Commands"
+    },
+    "commandsHelp" : {
+        "helpNotFound" : "Couldn't find any info for this command! :sob:",
+        "help" : "Display all settings, commands & info with `!help`",
+        "tweet" : "You can write a tweet: `!announce This is a tweet! :bird:`\r\nShare the latest tweet to all announcement channels: `!ann latest`\r\nShare a specific tweet: `!tweet get <linkToTheTweet>`",
+        "ask" : "Ask Jeeves whatever you want and he'll answer: `!ask Will I ever be the PVP King?`",
+        "greet" : "Greet Jeeves. No arguments required."
     }
 }

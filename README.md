@@ -9,58 +9,19 @@ To start Jeeves, you need to first create a `config.json` file in the `app/` fol
 ### Properties
 * **Token**: This is the token of the discord bot, where the app will connect to. See [this](https://discordapp.com/developers/applications/me)!
 * **Prefix**: This is the prefix which can be used by ranked users to communicate with Jeeves.
-* **Title**: Here you can set an alternative name of the bot.
-* **Rank 2**: This is an array of all roles with *Rank 2* permissions.
-* **Rank 1**: This is an array of all roles with *Rank 1* permissions.
-* **Free Mode**: If this is toggled off, then only ranked users can communicate with Jeeves.
+* **Alloewd Roles**: This is an array of all roles who can access all commands.
 * **Log**: You can toggle logging here. The logs will be saved in the `log.txt` file.
 * **Twitter**: Register a Twitter App [here](https://apps.twitter.com) and insert all the keys in the fields. `Channels` is an array of all discord channel-id's, which will act as announcement channels!
+* **Fun Channels**: Those are all channels where users with any role can use trivial commands.
+* **Fun Servers**: Same as `Fun Channels`, but for servers.
+* **Banned**: You can activate auto moderation here and set unmoderated channels as well as list all banned words.
 
 ## Commands & Features
-*(See `dictionary.json` for other possible keywords)*
+Type `!help` in Discord to see all settings & commands. Jeeves is capable of *tweeting* posts and sharing tweets to all set announcements channels!
 
-If the `Free Mode` is turned **off**, only users with ranks can talk with Jeeves. When turned on, Jeeves will respond to everyone.
-```
-!freemode on
-!freemode off
-```
-### Twitter
-**`Requires Rank 2`**
-
-Jeeves can quickly tweet and simultaneously share the tweets to all set channels.
-
-#### Tweeting and sharing to all announcement channels
-```
-!ann Today was good day! :grin:
-```
-#### Sharing the latest tweet to all announcement channels
-```
-!ann get
-```
-### Games
-**`No rank required`**
-
-Users can play say hello or play `Magic 8 ball` with Jeeves.
-```
-Jeeves <any text>
-Example: Jeeves Will I ever get R14?
-```
-User with ranks can instead of "Jeeves" (`title` property in the `config.json`) also use the set prefix:
-```
-!hi
-```
-
-### Display Settings
-**`Requires Rank 1`**
-Users can display all settings, like this:
-```
-!settings
-```
-
-### Logging
-If turned on, all activity where the prefix is used will be logged in a `log.txt` file!
+Bot activity can be logged if turned on. The bot can also moderate new messages if activated.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details!
+This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details!
 
 [© Elysium Project](https://www.elysium-project.org)

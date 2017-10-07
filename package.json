@@ -1,11 +1,11 @@
 {
   "name": "jeeves",
-  "version": "2.0.0",
+  "version": "1.1.0",
   "description": "The perfect gentleman roboter, who will attend your needs! A discord bot and Community Manager.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app/index.js",
+    "start": "node jeeves.js",
     "stop": "killall -SIGINT jeeves"
   },
   "author": "Josi",
@@ -14,6 +14,7 @@
     "dateformat": "^3.0.2",
     "discord.js": "^11.2.1",
     "fs": "0.0.1-security",
+    "request": "^2.83.0",
     "twitter": "^1.7.1"
   }
 }
