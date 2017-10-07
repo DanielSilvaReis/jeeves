@@ -254,7 +254,12 @@ bot.on("message", (message) => {
           },
           description : response.text 
         } 
-      }).catch((err) => {
+      })
+      .then((msg) => {
+        msg.react("\:thumbsup:");
+        msg.react("\:thumbsdown:");
+      })
+      .catch((err) => {
         logActivity(new Date(), channel.name, channel.guild.name, "ERROR", err.message);
       });
     });

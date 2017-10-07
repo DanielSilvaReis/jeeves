@@ -38,7 +38,7 @@
         "getTweet" : "get",
         "getLatestTweet" : "latest",
         "sharingTweet" : ":bird: Sharing tweet: ",
-        "tag" : "here",
+        "tag" : "@here",
         "success" : ":bird: Tweeting... Link: ",
         "error" : "I couldn't tweet! :sob:",
         "emptyError" : "Cannot tweet nothing! :thinking:",
