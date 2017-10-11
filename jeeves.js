@@ -162,7 +162,7 @@ bot.on("message", (message) => {
       exclude_replies : true 
     })
     .then((result) => {
-      sendMessage(`${dict.tweet.sharingTweet}<https://twitter.com/${result[0].user.screen_name}/status/${result[0].id_str}<`);
+      sendMessage(`${dict.tweet.sharingTweet}<https://twitter.com/${result[0].user.screen_name}/status/${result[0].id_str}>`);
       shareAnnouncement(result[0]);
     })
     .catch((errors) => handleTweetErrors(errors));
@@ -307,7 +307,7 @@ function logActivity(date, channel, server, displayName, text) {
 
   console.log(logResult);
   
-  if (!config.log) return; // Writing logs to file disabled
+  if (!config.logging) return; // Writing logs to file disabled
 
   fs.appendFile("log.txt", logResult + "\r\n", "utf8", function(err) {
     if(err) {
