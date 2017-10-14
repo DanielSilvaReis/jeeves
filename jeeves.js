@@ -256,7 +256,8 @@ bot.on("message", (message) => {
         } 
       })
       .then((msg) => {
-        msg.react("❤");
+        msg.react("👍");
+        msg.react("👎");
       })
       .catch((err) => {
         logActivity(new Date(), channel.name, channel.guild.name, "ERROR", err.message);
