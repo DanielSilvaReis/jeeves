@@ -9,7 +9,7 @@ To start Jeeves, you need to first create a `config.json` file. The `config.exam
 ### Properties
 * **Token**: This is the token of the discord bot, where the app will connect to. See [this](https://discordapp.com/developers/applications/me)!
 * **Prefix**: This is the prefix which can be used by ranked users to communicate with Jeeves.
-* **Alloewd Roles**: This is an array of all roles who can access all commands.
+* **Allowed Roles**: This is an array of all roles who can access all commands.
 * **Log**: You can toggle logging here. The logs will be saved in the `log.txt` file.
 * **Twitter**: Register a Twitter App [here](https://apps.twitter.com) and insert all the keys in the fields. `Channels` is an array of all discord channel-id's, which will act as announcement channels!
 * **Fun Channels**: Those are all channels where users with any role can use trivial commands.
